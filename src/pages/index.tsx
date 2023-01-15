@@ -11,8 +11,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="mt-4 flex justify-center font-poppins">
-        <h1 className="text-cyan-500">Welcome to Webguide</h1>
+      <main className="mt-4 flex justify-center">
+        <h1 className="font-sans text-cyan-500">Welcome to Webguide</h1>
       </main>
     </>
   );

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
-    <nav className="rounded border-gray-200  bg-neutral-800 px-2 py-2.5 font-poppins sm:px-4">
+    <nav className="rounded border-gray-200  bg-neutral-800 px-2 py-2.5 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
           <span className="self-center whitespace-nowrap text-xl font-semibold text-white">
