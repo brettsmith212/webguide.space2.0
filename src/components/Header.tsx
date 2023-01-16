@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                 href="/blog"
                 className="block rounded py-2 pl-3 pr-4 text-gray-200 hover:bg-cyan-100 hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-white"
               >
-                Services
+                Blog
               </Link>
             </li>
             <li>
