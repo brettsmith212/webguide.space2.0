@@ -1,6 +1,16 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+const activeLink =
+  "block rounded bg-cyan-500 py-2 pl-3 pr-4 text-white md:bg-transparent md:p-0 md:text-cyan-500";
+
+const inactiveLink =
+  "block rounded py-2 pl-3 pr-4 text-gray-200 hover:bg-cyan-100 hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-white";
 
 const Header: React.FC = () => {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
   return (
     <nav className="rounded border-gray-200  bg-neutral-800 px-2 py-2.5 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
@@ -36,8 +46,7 @@ const Header: React.FC = () => {
             <li>
               <Link
                 href="/"
-                className="block rounded bg-cyan-500 py-2 pl-3 pr-4 text-white md:bg-transparent md:p-0 md:text-cyan-500"
-                aria-current="page"
+                className={currentRoute == "/" ? activeLink : inactiveLink}
               >
                 Home
               </Link>
@@ -45,7 +54,9 @@ const Header: React.FC = () => {
             <li>
               <Link
                 href="/theguide"
-                className="block rounded py-2 pl-3 pr-4 text-gray-200 hover:bg-cyan-100 hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-white"
+                className={
+                  currentRoute == "/theguide" ? activeLink : inactiveLink
+                }
               >
                 The Guide
               </Link>
@@ -53,7 +64,7 @@ const Header: React.FC = () => {
             <li>
               <Link
                 href="/blog"
-                className="block rounded py-2 pl-3 pr-4 text-gray-200 hover:bg-cyan-100 hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-white"
+                className={currentRoute == "/blog" ? activeLink : inactiveLink}
               >
                 Blog
               </Link>
@@ -61,7 +72,7 @@ const Header: React.FC = () => {
             <li>
               <Link
                 href="/about"
-                className="block rounded py-2 pl-3 pr-4 text-gray-200 hover:bg-cyan-100 hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-white"
+                className={currentRoute == "/about" ? activeLink : inactiveLink}
               >
                 About
               </Link>
