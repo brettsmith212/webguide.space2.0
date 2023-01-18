@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <main className="m-8 flex flex-col gap-8 p-2 text-white">
@@ -21,9 +23,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex">
-        <button className="transform rounded-lg bg-cyan-600 px-6 py-2 font-medium capitalize tracking-wide text-white transition-colors duration-200 hover:bg-cyan-500 focus:outline-none focus:ring focus:ring-cyan-300 focus:ring-opacity-80">
+        <Link href="theguide" className="transform rounded-lg bg-cyan-600 px-6 py-2 font-medium capitalize tracking-wide text-white transition-colors duration-200 hover:bg-cyan-500 focus:outline-none focus:ring focus:ring-cyan-300 focus:ring-opacity-80">
           The Guide
-        </button>
+        </Link>
       </div>
     </main>
   );
