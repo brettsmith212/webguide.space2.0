@@ -11,7 +11,6 @@ const poppins = Poppins({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  console.log(poppins.variable);
   return (
     <div className={`${poppins.variable} font-sans`}>
       <Header />
