@@ -7,7 +7,14 @@ import { z } from "zod";
  */
 export const serverSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]),
+  SUPABASE_URL: z.string(),
+  SUPABASE_ANON_KEY: z.string(),
 });
+
+export const serverEnv = {
+  SUPABASE_URL: process.env.SUPABASE_URL,
+  SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
+};
 
 /**
  * Specify your client-side environment variables schema here.
@@ -16,11 +23,8 @@ export const serverSchema = z.object({
  */
 export const clientSchema = z.object({
   // NEXT_PUBLIC_CLIENTVAR: z.string(),
-  NEXT_PUBLIC_SUPABASE_URL: z.string(),
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string()
 });
 
 export const clientEnv = {
-  NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-}
+  // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+};
